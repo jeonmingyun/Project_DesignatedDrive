@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main_page_map"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#ff0000"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_start_point_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00ff00"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/search_start_point_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/search_start_point_hint"
+            android:textSize="@dimen/text_size_mid"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search_black_24dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_end_point_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00ffff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/search_end_point_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/search_end_point_hint"
+            android:textSize="@dimen/text_size_mid"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search_black_24dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_layover_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/text_color_bright"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_bottom_btn"
+        android:text="@string/add_layover_btn"/>
+
+    <Button
+        android:id="@+id/call_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/text_color_bright"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_bottom_btn"
+        android:text="@string/call_btn"/>
+
+</LinearLayout>

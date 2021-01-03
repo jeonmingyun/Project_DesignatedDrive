@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Designated Drive</string>
+    <string name="call_btn">호출 하기</string>
+    <string name="search_start_point_hint">출발지를 입력해주세요.</string>
+    <string name="search_end_point_hint">도착지를 입력해주세요.</string>
+    <string name="add_layover_btn">경유 추가</string>
+</resources>
