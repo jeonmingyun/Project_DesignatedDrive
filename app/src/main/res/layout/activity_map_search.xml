@@ -5,8 +5,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <EditText
+        android:id="@+id/address_search_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/search_text_hint"/>
+    <Button
+        android:id="@+id/address_search_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="검색"/>
+
     <LinearLayout
-        android:id="@+id/map_layout"
+        android:id="@+id/map_view"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:background="#ff0000"

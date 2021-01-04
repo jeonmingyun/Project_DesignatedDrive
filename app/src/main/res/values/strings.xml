@@ -4,4 +4,5 @@
     <string name="search_start_point_hint">출발지를 입력해주세요.</string>
     <string name="search_end_point_hint">도착지를 입력해주세요.</string>
     <string name="add_layover_btn">경유 추가</string>
+    <string name="search_text_hint">검색</string>
 </resources>
