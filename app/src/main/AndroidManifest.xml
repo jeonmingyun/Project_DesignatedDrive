@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.mx.designateddrive">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -16,9 +16,14 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
 
-        <meta-data android:name="com.kakao.sdk.AppKey" android:value="5530e8e6c0fd92bc5f146027e7e2b519"/>
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="5530e8e6c0fd92bc5f146027e7e2b519" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDI0YR1ZhO0uzBpB8ZosTYLVyEyW35IOT0" />
 
-        <activity android:name=".activity.MapSearchActivity"/>
+        <activity android:name=".activity.MapSearchActivity" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
