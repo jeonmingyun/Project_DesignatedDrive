@@ -5,6 +5,15 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -16,12 +25,24 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.mx.designateddrive.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="5530e8e6c0fd92bc5f146027e7e2b519" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDI0YR1ZhO0uzBpB8ZosTYLVyEyW35IOT0" />
+            android:value="@string/google_map_api_key" />
 
         <activity android:name=".activity.MapSearchActivity" />
         <activity android:name=".activity.MainActivity">
@@ -31,6 +52,39 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+<!--        <activity android:name=".Test.TestActivity">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+        <activity android:name=".activity.ReviewAct"/>
+
+        <activity android:name=".activity.ProfileAct" />
+
+        <activity android:name=".activity.ReviewListAct"/>
+
+        <activity android:name=".activity.ReviewProAct"/>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+
+        <service
+            android:name=".fcm.MyFirebaseMessagingService"
+            android:exported="false"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".gps.GpsTracker">
+        </service>
     </application>
 
 </manifest>

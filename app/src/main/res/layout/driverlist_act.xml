@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_above="@+id/star_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="기사리스트"
+        android:textSize="25dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@android:color/black"/>
+
+
+    <Button
+        android:layout_below="@+id/title"
+        android:id="@+id/park_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="박기사"/>
+
+    <Button
+        android:layout_below="@+id/park_btn"
+        android:id="@+id/kim_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="김기사"/>
+
+    <Button
+        android:layout_below="@+id/kim_btn"
+        android:id="@+id/lee_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="이기사"/>
+</RelativeLayout>

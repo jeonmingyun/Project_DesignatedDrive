@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_above="@+id/star_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="김기사"
+        android:textSize="25dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@android:color/black"/>
+
+    <RatingBar
+        android:id="@+id/star_bar"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/review_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1"
+        android:rating="0"/>
+
+    <EditText
+        android:id="@+id/review_et"
+        style="@android:style/Widget.Holo.Button.Borderless"
+        android:background="#D8D8D8"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:gravity="top"
+        android:hint="기사님의 대한 평가를 작성해주세요!"/>
+
+    <Button
+        android:id="@+id/review_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="평가하기"
+        android:textSize="25dp"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/review_et"/>
+
+</RelativeLayout>

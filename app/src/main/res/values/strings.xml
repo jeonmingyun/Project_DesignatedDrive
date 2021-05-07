@@ -1,4 +1,6 @@
 <resources>
+    <string name="google_map_api_key">AIzaSyDI0YR1ZhO0uzBpB8ZosTYLVyEyW35IOT0</string>
+
     <string name="app_name">Designated Drive</string>
     <string name="call_btn">호출 하기</string>
     <string name="search_start_point_hint">출발지를 입력해주세요.</string>
@@ -6,4 +8,12 @@
     <string name="add_layover_btn">경유 추가</string>
     <string name="location_text_hint">검색</string>
     <string name="search_btn">검색</string>
+
+    <string name="photo_shoot">사진 촬영</string>
+    <string name="photo_gallery">사진 앨범</string>
+    <string-array name="photo_select_str_arr">
+        <item>@string/photo_shoot</item>
+        <item>@string/photo_gallery</item>
+    </string-array>
+    <string name="photo_select_str">사진선택</string>
 </resources>

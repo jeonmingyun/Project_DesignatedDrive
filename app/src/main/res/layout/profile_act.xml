@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <Button
+        android:id="@+id/gall_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="앨범에서 선택"/>
+
+    <Button
+        android:id="@+id/photo_btn"
+        android:layout_above="@+id/gall_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="사진찍기"/>
+
+    <ImageView
+        android:id="@+id/photo_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/photo_btn"/>
+
+</RelativeLayout>

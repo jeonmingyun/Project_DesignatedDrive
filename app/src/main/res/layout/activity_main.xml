@@ -1,26 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="10"
     tools:context=".activity.MainActivity">
 
-    <LinearLayout
-        android:id="@+id/main_page_map"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="#ff0000"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:layout_above="@id/search_start_point_layout">
 
-    </LinearLayout>
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/marker"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/targeticon" />
+
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/search_start_point_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@id/search_end_point_layout"
         android:background="#00ff00"
         android:orientation="horizontal">
 
@@ -28,7 +40,8 @@
             android:id="@+id/search_start_point_text"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/search_start_point_hint"
+            android:hint="@string/search_start_point_hint"
+            android:text=""
             android:textSize="@dimen/text_size_mid"/>
 
         <ImageView
@@ -42,6 +55,7 @@
         android:id="@+id/search_end_point_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/add_layover_btn"
         android:background="#00ffff"
         android:orientation="horizontal">
 
@@ -49,7 +63,8 @@
             android:id="@+id/search_end_point_text"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/search_end_point_hint"
+            android:hint="@string/search_end_point_hint"
+            android:text=""
             android:textSize="@dimen/text_size_mid"/>
 
         <ImageView
@@ -59,15 +74,25 @@
 
     </LinearLayout>
 
-    <Button
+    <RelativeLayout
         android:id="@+id/add_layover_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:textColor="@color/text_color_bright"
-        android:textStyle="bold"
-        android:textSize="@dimen/text_size_bottom_btn"
-        android:text="@string/add_layover_btn"/>
+        android:layout_above="@id/call_btn"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:textColor="@color/text_color_bright"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_bottom_btn"
+            android:text="@string/add_layover_btn"/>
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/call_btn"
@@ -75,8 +100,30 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:textColor="@color/text_color_bright"
+        android:layout_alignParentBottom="true"
         android:textStyle="bold"
         android:textSize="@dimen/text_size_bottom_btn"
         android:text="@string/call_btn"/>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/pro_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/go_review"
+        android:text="프로필사진"/>
+
+    <Button
+        android:id="@+id/go_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/search_start_point_layout"
+        android:text="리뷰"/>
+
+    <!--<Button
+        android:id="@+id/reviewList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/search_start_point_layout"
+        android:text="기사리뷰리스트"/>-->
+
+</RelativeLayout>
